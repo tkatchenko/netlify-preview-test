@@ -1,0 +1,28 @@
+{
+  "name": "netlify-preview-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "netlify-preview-test",
+  "author": "Tommy Tkatchenko",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@portabletext/react": "^3.0.7",
+    "dotenv": "^16.3.1",
+    "gatsby": "^5.12.3",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-source-sanity": "^7.8.1",
+    "gatsby-transformer-sharp": "^5.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
