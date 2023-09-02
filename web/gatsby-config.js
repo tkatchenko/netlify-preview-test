@@ -7,6 +7,17 @@ module.exports = {
     title: `Netlify Preview Test`,
     siteUrl: `https://www.yourdomain.tld`
   },
+  headers: [
+    {
+      source: '*',
+      headers: [
+        {
+          key: 'X-Frame-Options',
+          value: 'ALLOW',
+        },
+      ],
+    },
+  ]
   plugins: [{
     resolve: 'gatsby-source-sanity',
     options: {
@@ -15,16 +26,5 @@ module.exports = {
       token: process.env.SANITY_TOKEN,
       overlayDrafts: true,
     }
-  }, {
-    resolve: 'gatsby-plugin-netlify',
-    options: {
-      allPageHeaders: [
-        'X-XSS-Protection: 1; mode=block',
-        'X-Content-Type-Options: nosniff',
-        'Referrer-Policy: same-origin',
-        `Content-Security-Policy: frame-ancestors 'self' http://localhost`,
-        'X-Frame-Options: ALLOW',
-      ],
-    },
   }, 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp']
 };
