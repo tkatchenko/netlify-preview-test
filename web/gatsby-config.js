@@ -18,14 +18,13 @@ module.exports = {
   }, {
     resolve: 'gatsby-plugin-netlify',
     options: {
-      headers: {
-        "/*": [
-          "X-XSS-Protection: 1; mode=block",
-          "X-Content-Type-Options: nosniff",
-          "Referrer-Policy: same-origin",
-          `Content-Security-Policy: frame-ancestors 'self' http://localhost`,
-        ],
-      },
+      allPageHeaders: [
+        'X-XSS-Protection: 1; mode=block',
+        'X-Content-Type-Options: nosniff',
+        'Referrer-Policy: same-origin',
+        `Content-Security-Policy: frame-ancestors 'self' http://localhost`,
+        'X-Frame-Options': 'ALLOW',
+      ],
     },
   }, 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp']
 };
