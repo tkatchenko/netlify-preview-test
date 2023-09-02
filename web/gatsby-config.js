@@ -23,7 +23,7 @@ module.exports = {
         'X-Content-Type-Options: nosniff',
         'Referrer-Policy: same-origin',
         `Content-Security-Policy: frame-ancestors 'self' http://localhost`,
-        'X-Frame-Options': 'ALLOW',
+        'X-Frame-Options: ALLOW',
       ],
     },
   }, 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp']
