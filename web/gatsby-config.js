@@ -15,5 +15,10 @@ module.exports = {
       token: process.env.SANITY_TOKEN,
       overlayDrafts: true,
     }
-  }, "gatsby-plugin-netlify", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp"]
+  }, {
+    resolve: 'gatsby-plugin-netlify',
+    options: {
+      mergeSecurityHeaders: false,
+    },
+  }, 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp']
 };
