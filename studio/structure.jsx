@@ -61,9 +61,17 @@ export const PreviewStatus = () => {
 
       if (status === 'ready') {
         setPreviewText('Preview ✅');
-      } else if (status === 'enqueued') {
-        setPreviewText('Preview ⏳');
-      } else if (status === 'building' || status === 'processing') {
+      } else if (
+        status === 'new' ||
+        status === 'enqueued' ||
+        status === 'building' ||
+        status === 'uploading' ||
+        status === 'uploaded' ||
+        status === 'preparing' ||
+        status === 'prepared' ||
+        status === 'processing' ||
+        status === 'retrying'
+      ) {
         setPreviewText('Preview ⏳');
       } else {
         setPreviewText('Preview ❗️');
